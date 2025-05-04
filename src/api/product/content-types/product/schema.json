@@ -56,6 +56,12 @@
           "localized": true
         }
       }
+    },
+    "material": {
+      "type": "string"
+    },
+    "size": {
+      "type": "string"
     }
   }
 }
