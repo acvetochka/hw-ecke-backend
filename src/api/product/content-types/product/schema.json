@@ -62,6 +62,15 @@
     },
     "size": {
       "type": "string"
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Candle",
+        "Card",
+        "Model",
+        "Gips"
+      ]
     }
   }
 }
