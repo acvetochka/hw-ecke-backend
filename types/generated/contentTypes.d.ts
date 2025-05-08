@@ -419,6 +419,22 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       }>;
     publishedAt: Schema.Attribute.DateTime;
     size: Schema.Attribute.String;
+    Tags: Schema.Attribute.JSON &
+      Schema.Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          'Geburtstag',
+          'Muttertag',
+          'Ostern',
+          'Weihnachten',
+          'Valentinstag',
+          'Hochzeit',
+          'Einladung',
+          'Schulanfang',
+          '',
+        ]
+      > &
+      Schema.Attribute.DefaultTo<'[]'>;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{

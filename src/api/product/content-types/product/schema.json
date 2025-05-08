@@ -71,6 +71,22 @@
         "Model",
         "Gips"
       ]
+    },
+    "Tags": {
+      "type": "customField",
+      "default": "[]",
+      "options": [
+        "Geburtstag",
+        "Muttertag",
+        "Ostern",
+        "Weihnachten",
+        "Valentinstag",
+        "Hochzeit",
+        "Einladung",
+        "Schulanfang",
+        ""
+      ],
+      "customField": "plugin::multi-select.multi-select"
     }
   }
 }
