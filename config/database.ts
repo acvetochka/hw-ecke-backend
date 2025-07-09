@@ -7,11 +7,15 @@ type EnvFn = {
   json<T = unknown>(key: string, defaultValue?: T): T;
 };
 
+type ClientType = "mysql" | "postgres" | "sqlite";
+
 export default ({ env }: { env: EnvFn }) => {
   // export default ({ env }) => {
-  const client = env("DATABASE_CLIENT", "sqlite");
 
-  const connections = {
+  const client = env("DATABASE_CLIENT") as ClientType;
+
+  const connections: Record<ClientType, any> = {
+    // const connections = {
     mysql: {
       connection: {
         host: env("DATABASE_HOST", "localhost"),
